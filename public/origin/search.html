@@ -9,34 +9,44 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="search.css">
+    <!--/font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--/Font Awesome Animation-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css"
+        type="text/css" media="all" />
     <title>登山クエスト</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div class="container-fluid">
-            <a class="navbar-brand">登山クエスト</a>
-
-
-            <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item flex-fill list-group-item-primary border-info">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i>ホーム</a>
-                </li>
-                <li class="list-group-item flex-fill list-group-item-primary border-info">
-                    <a class="nav-link" href="#"><i class="fas fa-user-check"></i>新規会員登録</a>
-                </li>
-                <li class="list-group-item flex-fill list-group-item-primary border-info">
-                    <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i>マイページ
-                </li></a>
-
-
-                <li class="list-group-item">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="山を検索！" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+            <a class="navbar-brand p-2" href="#">登山クエスト</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item active p-2">
+                        <a class="nav-link" aria-current="page" href="#"><i
+                                class="fas fa-home faa-bounce animated-hover fa-lg"></i>ホーム</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="#"><i
+                                class="fas fa-user-check faa-bounce animated-hover fa-lg"></i>新規会員登録</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="#"><i
+                                class="fas fa-sign-in-alt faa-bounce animated-hover fa-lg"></i>マイページ</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="山・ルートを検索!" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </div>
     </nav>
 
@@ -46,130 +56,143 @@
     <div class="p-4  bg-img" style="background-color:rgba(100, 197, 78, 0.3);">
         <nav style="--bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">ホーム</a></li>
-              <li class="breadcrumb-item active" aria-current="page">検索</li>
+                <li class="breadcrumb-item"><a href="#">ホーム</a></li>
+                <li class="breadcrumb-item active" aria-current="page">検索</li>
             </ol>
-          </nav>
-        <div class="container" style="background-color:rgba(255, 255, 255, 0.8);">
-            <div class="p-4">
-                <label for="exampleFormControlInput1" class="form-label" >山の名前</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex.富士山">
-            </div>
-            <div class="row p-4">
-
-                <label for="exampleFormControlTextarea1" class="form-label col-12" >地域</label>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        北海道
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        東北
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        関東
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        中部
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        関西
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        中国
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        四国
-                    </label>
-                </div>
-                <div class="form-check col-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                    <label class="form-check-label" for="flexCheckChecked">
-                        九州
-                    </label>
-                </div>
-
-            </div>
+        </nav>
 
 
-            <form>
+        <div class="container mb-3" style="background-color:rgba(255, 255, 255, 0.8); ">
+            <div class="container"
+                style="border-style:solid; border-color: rgba(24, 73, 29, 0.9); border-width: 5px;padding:0px;">
+                <h1 style="background-color: rgba(24, 73, 29, 0.986); display:inline-block; color:white; padding:10px">
+                    登山ルート検索
+                </h1>
+                <div class="p-4">
+                    <label for="exampleFormControlInput1" class="form-label">山の名前</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex.富士山">
+                </div>
                 <div class="row p-4">
-                    <label for="exampleInputEmail1" class="form-label">難易度</label>
+
+                    <label for="exampleFormControlTextarea1" class="form-label col-12">所在地</label>
                     <div class="form-check col-3">
-                        <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked"
-                            checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                            初級
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            北海道
                         </label>
                     </div>
                     <div class="form-check col-3">
-                        <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
-                            中級
+                            東北
                         </label>
                     </div>
                     <div class="form-check col-3">
-                        <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
-                            上級
+                            関東
+                        </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            中部
+                        </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            関西
+                        </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            中国
+                        </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            四国
+                        </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            九州
                         </label>
                     </div>
 
                 </div>
-                <div class="p-4">
-                    <label for="time" class="form-label">所要時間</label>
-                    <select class="form-select mb-3" aria-label="Default select example">
 
-                        <option selected>選択してください</option>
-                        <option value="1">1時間以内</option>
-                        <option value="2">1時間〜2時間</option>
-                        <option value="3">2時間〜3時間</option>
-                        <option value="4">3時間以上</option>
-                    </select>
-                </div>
-                <div class="p-4">
-                    <button type="submit" class="btn btn-primary mb-3">検索</button>
-                </div>
-            </form>
+
+                <form>
+                    <div class="row p-4">
+                        <label for="exampleInputEmail1" class="form-label">難易度</label>
+                        <div class="form-check col-3">
+                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked"
+                                checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                初級
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                中級
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                上級
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="container pt-4 pl-4">
+                        <label for="time" class="form-label">所要時間（往復）</label>
+                        <select class="form-select mb-3" aria-label="Default select example">
+
+                            <option selected>選択してください</option>
+                            <option value="1">1時間以内</option>
+                            <option value="2">1時間〜2時間</option>
+                            <option value="3">2時間〜3時間</option>
+                            <option value="4">3時間〜4時間</option>
+                            <option value="5">4時間以上</option>
+                        </select>
+                    </div>
+                    <div class="p-4">
+                        <button type="submit" class="btn btn-primary mb-3　btn-lg">検索</button>
+                    </div>
+                </form>
+            </div>
 
             <!-- 検索結果表示 -->
-            <div class="row container m-1" style="border-style: solid;">
+            <div class="container mb-3 mt-3"
+                style="border-style: solid; border-width: 5px; border-color: rgba(86, 131, 105, 0.479);">
                 <p>検索結果</p>
-                <div class="col p-2">
-                    <img src="images/mountain2.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col">
-                    <a href="#" class="fs-1">富士山</a><br>
-                    <p>所在地：山梨県</p>
-                    <p>難易度：初級</p>
-                    <p>所要時間：2時間</p>
-                    <p>ルートの説明---------------------------------</p>
+                <div class="container row">
+                    <div class="col p-2">
+                        <img src="images/mountain2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <a href="#" class="fs-1">富士山</a><br>
+                        <p>所在地：山梨県</p>
+                        <p>難易度：初級</p>
+                        <p>所要時間：2時間</p>
+                        <p>ルートの説明---------------------------------</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
     </div>
-
-
-
-
 
 
     <footer class="footer mt-auto py-3 bg-dark">
@@ -180,7 +203,9 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 </body>
 
 

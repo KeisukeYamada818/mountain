@@ -9,35 +9,44 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="mountain.css">
+  <!--/font-awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+  <!--/Font Awesome Animation-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css"
+    type="text/css" media="all" />
   <title>登山クエスト</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-      <a class="navbar-brand">登山クエスト</a>
-
-
-      <ul class="list-group list-group-horizontal-sm">
-        <li class="list-group-item flex-fill list-group-item-primary border-info">
-          <a class="nav-link" href="#"><i class="fas fa-home"></i>ホーム</a>
-        </li>
-        <li class="list-group-item flex-fill list-group-item-primary border-info">
-          <a class="nav-link" href="#"><i class="fas fa-user-check"></i>ログアウト</a>
-        </li>
-        <li class="list-group-item flex-fill list-group-item-primary border-info">
-          <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i>マイページ
-        </li></a>
-
-
-        <li class="list-group-item">
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="山を検索！" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-        </li>
-      </ul>
+      <a class="navbar-brand p-2" href="#">登山クエスト</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active p-2">
+            <a class="nav-link" aria-current="page" href="#"><i
+                class="fas fa-home faa-bounce animated-hover fa-lg"></i>ホーム</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#"><i class="fas fa-user-check faa-bounce animated-hover fa-lg"></i>新規会員登録</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link" href="#"><i class="fas fa-sign-in-alt faa-bounce animated-hover fa-lg"></i>マイページ</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="山・ルートを検索!" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
     </div>
   </nav>
 
@@ -67,7 +76,7 @@
 
   <div class="container p-3" style="background-color: rgba(106, 161, 111, 0.466);">
     <p style="font-size: 30px;"><span>〇〇</span>へおすすめの山</p>
-    <a href="#" class="fs-1">富士山</a><br>
+
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
@@ -76,13 +85,19 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/mountain1.jpg" class="d-block w-100" alt="...">
+          <a href="#" class="fs-1">富士山</a>
+          <a href="#"><img src="images/mountain1.jpg" class="d-block w-100" alt="..."></a>
+
         </div>
         <div class="carousel-item">
-          <img src="images/mountain2.jpg" class="d-block w-100" alt="...">
+          <a href="#" class="fs-1">〇〇山</a>
+          <a href="#"><img src="images/mountain2.jpg" class="d-block w-100" alt="..."></a>
+
         </div>
         <div class="carousel-item">
-          <img src="images/mountain3.jpg" class="d-block w-100" alt="...">
+          <a href="#" class="fs-1">△△山</a>
+          <a href=""><img src="images/mountain3.jpg" class="d-block w-100" alt="..."></a>
+
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -99,53 +114,40 @@
 
 
 
-    <div class="container" style="background-color: rgba(216, 243, 212, 0.616);">
-      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">登りたいリスト</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">スケジュール</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">登山履歴</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">会員情報</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">問い合わせ</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">Q＆A</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">プラバシーポリシー</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">利用規約</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">ダミー</a></div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light"><a href="#">ダミー</a></div>
-        </div>
+  <div class="container pb-2 mb-4" style="background-color: rgba(216, 243, 212, 0.616);">
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">登りたいリスト</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">スケジュール</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">登山履歴</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">会員情報</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">問い合わせ</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">Q＆A</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">プラバシーポリシー</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">利用規約</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">ダミー</a></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"><a href="#">ダミー</a></div>
       </div>
     </div>
-    
-    
-    
-    
-   
-    
-  
-
- 
-
-
-
-
+  </div>
 
 
   <footer class="footer mt-auto py-3 bg-dark">
