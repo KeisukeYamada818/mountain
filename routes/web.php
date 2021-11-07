@@ -11,6 +11,10 @@ Route::get("/tables_check_view_html", function () {
 
 Route::get("mypage/", "main\MypageController@index");
 Route::get("mounts/show", "main\MountsController@show");
+Route::get("mounts/index", "main\MountsController@index");
+Route::get("favorite/index", "main\FavoriteController@index");
+Route::get("history/index", "main\HistoryController@index");
+
 //=======================================================================
 //index
 Route::get("mount/", "manage\MountsController@index");

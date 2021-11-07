@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <!-- 山ルート詳細画面 -->
+    <!-- 山・ルート詳細画面 -->
     <nav style="--bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">ホーム</a></li>

@@ -10,7 +10,7 @@
     </nav>
 
     <div class="container p-3" style="background-color: rgba(149, 218, 197, 0.2);">
-        <p style="font-size: 50px;"><span>〇〇</span>のレベルは.....<spna>勇者</spna>！</p>
+        <p style="font-size: 50px;"><span>〇〇</span>のレベルは.....<span>勇者</span>！</p>
 
         <div class="">
             <img src="/origin/images/yuusya.jpg">
@@ -18,9 +18,6 @@
         <p>次のレベルまであと<span>〇〇</span></p>
 
     </div>
-
-
-
 
     <div class="container p-3" style="background-color: rgba(106, 161, 111, 0.466);">
         <p style="font-size: 30px;"><span>〇〇</span>へおすすめの山</p>
@@ -74,7 +71,7 @@
                 <div class="p-3 border bg-light"><a href="#">登山履歴</a></div>
             </div>
             <div class="col">
-                <div class="p-3 border bg-light"><a href="#">会員情報</a></div>
+                <div class="p-3 border bg-light"><a href="#">アカウント情報</a></div>
             </div>
             <div class="col">
                 <div class="p-3 border bg-light"><a href="#">問い合わせ</a></div>

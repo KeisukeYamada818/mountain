@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-    <!-- 検索画面 -->
-    <div class="p-4  bg-img" style="background-color:rgba(100, 197, 78, 0.3);">
+    <!-- 山・ルート検索画面 -->
+    <div class="p-4" style="background-color:rgba(100, 197, 78, 0.3);">
         <nav style="--bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">ホーム</a></li>
@@ -123,7 +123,7 @@
                 <p>検索結果</p>
                 <div class="container row">
                     <div class="col p-2">
-                        <img src="images/mountain2.jpg" alt="" class="img-fluid">
+                        <img src="/origin/images/mountain2.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col">
                         <a href="#" class="fs-1">富士山</a><br>
@@ -135,10 +135,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 
     </div>
 @endsection

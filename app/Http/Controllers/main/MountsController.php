@@ -32,7 +32,7 @@ class MountsController extends Controller
      */
     public function create()
     {
-        return view("mount.create");
+        return view("mounts.create");
     }
 
     /**
