@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\main;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
@@ -9,6 +9,7 @@ use Validate;
 use DB;
 use App\Mount;
 use App\MountsImag;
+use App\Http\Controllers\Controller;
 
 //=======================================================================
 class MountsController extends Controller
@@ -20,25 +21,8 @@ class MountsController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get("search");
-        $perPage = 25;
 
-        if (!empty($keyword)) {
-
-            // ----------------------------------------------------
-            // -- QueryBuilder: SELECT [mounts]--
-            // ----------------------------------------------------
-            $mount = DB::table("mounts")
-                ->orWhere("mounts.name", "LIKE", "%$keyword%")->orWhere("mounts.high", "LIKE", "%$keyword%")->orWhere("mounts.famous", "LIKE", "%$keyword%")->orWhere("mounts.area", "LIKE", "%$keyword%")->select("*")->addSelect("mounts.id")->paginate($perPage);
-        } else {
-            //$mount = Mount::paginate($perPage);
-            // ----------------------------------------------------
-            // -- QueryBuilder: SELECT [mounts]--
-            // ----------------------------------------------------
-            $mount = DB::table("mounts")
-                ->select("*")->addSelect("mounts.id")->paginate($perPage);
-        }
-        return view("mount.index", compact("mount"));
+        return view("mounts.index");
     }
 
     /**
@@ -108,16 +92,9 @@ class MountsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function show($id)
+    public function show()
     {
-        //$mount = Mount::findOrFail($id);
-
-        // ----------------------------------------------------
-        // -- QueryBuilder: SELECT [mounts]--
-        // ----------------------------------------------------
-        $mount = DB::table("mounts")
-            ->select("*")->addSelect("mounts.id")->where("mounts.id", $id)->first();
-        return view("mount.show", compact("mount"));
+        return view('mounts.show');
     }
 
     /**
