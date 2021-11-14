@@ -1,8 +1,5 @@
 <?php
 
-use App\Route;
-use Illuminate\Http\Response;
-
 //default
 Route::get("/", "main\HomeController@top");
 //Demo (Delete after site publish.)
