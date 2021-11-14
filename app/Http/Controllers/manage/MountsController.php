@@ -9,6 +9,7 @@ use Validate;
 use DB;
 use App\Mount;
 use App\Http\Controllers\Controller;
+use App\MountsImag;
 
 //=======================================================================
 class MountsController extends Controller
@@ -57,10 +58,41 @@ class MountsController extends Controller
             "area" => "nullable|integer", //integer('area')->nullable()
 
         ]);
-        $requestData = $request->all();
 
-        Mount::create($requestData);
+        $mount = new Mount();
+        $mount->name = $request->name;
+        $mount->area_id = $request->area_id;
+        $mount->high = $request->high;
+        $mount->famous = $request->famous;
+        $mount->save();
 
+        $image1 = $request->file('image1');
+        if ($image1) {
+            $path = $image1->store('public/mount');
+            $file_name = basename($path);
+            $mounts_image = new MountsImag();
+            $mounts_image->mount_id = $mount->id;
+            $mounts_image->image = $file_name;
+            $mounts_image->save();
+        }
+        $image2 = $request->file('image2');
+        if ($image2) {
+            $path = $image2->store('public/mount');
+            $file_name = basename($path);
+            $mounts_image = new MountsImag();
+            $mounts_image->mount_id = $mount->id;
+            $mounts_image->image = $file_name;
+            $mounts_image->save();
+        }
+        $image3 = $request->file('image3');
+        if ($image3) {
+            $path = $image3->store('public/mount');
+            $file_name = basename($path);
+            $mounts_image = new MountsImag();
+            $mounts_image->mount_id = $mount->id;
+            $mounts_image->image = $file_name;
+            $mounts_image->save();
+        }
         return redirect("mount")->with("flash_message", "mount added!");
     }
 
@@ -71,9 +103,9 @@ class MountsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function show($id)
+    public function show($mount)
     {
-        $mount = Mount::findOrFail($id);
+
         return view("mount.show", compact("mount"));
     }
 

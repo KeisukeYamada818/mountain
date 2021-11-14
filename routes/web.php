@@ -1,5 +1,6 @@
 <?php
 
+use App\Route;
 use Illuminate\Http\Response;
 
 //default
@@ -11,25 +12,14 @@ Route::get("/tables_check_view_html", function () {
 
 Route::get("mypage/", "main\MypageController@index");
 Route::get("mounts/show", "main\MountsController@show");
-Route::get("mounts/index", "main\MountsController@index");
-Route::get("favorite/index", "main\FavoriteController@index");
-Route::get("history/index", "main\HistoryController@index");
+Route::get("mounts/", "main\MountsController@index");
+Route::get("favorite/", "main\FavoriteController@index");
+Route::get("history/", "main\HistoryController@index");
 
 //=======================================================================
 //index
-Route::get("mount/", "manage\MountsController@index");
-//create
-Route::get("mount/create", "manage\MountsController@create");
-//show
-Route::get("mount/{id})", "manage\MountsController@show");
-//store
-Route::post("mount/store", "manage\MountsController@store");
-//edit
-Route::get("mount/{id}/edit", "manage\MountsController@edit");
-//update
-Route::put("mount/{id}", "manage\MountsController@update");
-//destroy
-Route::delete("mount/{id}", "manage\MountsController@destroy");
+Route::resource('mount', "manage\Mountcontroller");
+
 //=======================================================================
 
 //=======================================================================

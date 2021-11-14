@@ -65,13 +65,10 @@
                 <div class="p-3 border bg-light"><a href="#">登りたいリスト</a></div>
             </div>
             <div class="col">
-                <div class="p-3 border bg-light"><a href="#">スケジュール</a></div>
+                <div class="p-3 border bg-light"><a href="#">冒険の記録</a></div>
             </div>
             <div class="col">
-                <div class="p-3 border bg-light"><a href="#">登山履歴</a></div>
-            </div>
-            <div class="col">
-                <div class="p-3 border bg-light"><a href="#">アカウント情報</a></div>
+                <div class="p-3 border bg-light"><a href="#">プロフィール編集</a></div>
             </div>
             <div class="col">
                 <div class="p-3 border bg-light"><a href="#">問い合わせ</a></div>
@@ -84,6 +81,9 @@
             </div>
             <div class="col">
                 <div class="p-3 border bg-light"><a href="#">利用規約</a></div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light"><a href="#">ダミー</a></div>
             </div>
             <div class="col">
                 <div class="p-3 border bg-light"><a href="#">ダミー</a></div>

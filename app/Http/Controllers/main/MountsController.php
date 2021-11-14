@@ -21,8 +21,8 @@ class MountsController extends Controller
      */
     public function index(Request $request)
     {
-
-        return view("mounts.index");
+        $mounts = Mount::all();
+        return view("mounts.index", compact('mounts'));
     }
 
     /**

@@ -133,6 +133,20 @@
                         <p>ルートの説明---------------------------------</p>
                     </div>
                 </div>
+                @foreach ($mounts as $mount)
+                    <div class="container row">
+                        <div class="col p-2">
+                            <img src="/origin/images/mountain2.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <a href="#" class="fs-1">{{ $mount->name }}</a><br>
+                            <p>所在地：{{ $mount->area->name }}</p>
+                            <p>難易度：初級</p>
+                            <p>所要時間：2時間</p>
+                            <p>ルートの説明---------------------------------</p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
 

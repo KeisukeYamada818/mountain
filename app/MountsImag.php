@@ -8,5 +8,5 @@ class MountsImag extends Model
 {
     //
     protected $guarded = ["id"];
-    protected $table = 'mounts_images';
+    protected $table = 'mounts_image';
 }

@@ -44,10 +44,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="area" class="col-md-4 control-label">area: </label>
+                                <label for="area_id" class="col-md-4 control-label">area_id: </label>
                                 <div class="col-md-6">
-                                    <input class="form-control" name="area" type="text" id="area"
-                                        value="{{ old('area') }}">
+                                    <input class="form-control" name="area_id" type="text" id="area_id"
+                                        value="{{ old('area_id') }}">
                                 </div>
                             </div>
 
