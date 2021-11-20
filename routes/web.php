@@ -70,4 +70,4 @@ Route::put("mounts_imag/{id}", "manage\MountsImageController@update");
 Route::delete("mounts_imag/{id}", "manage\MountsImageController@destroy");
 //=======================================================================
 
-Auth::routes();
+Auth::routes(['verify' => true]);
