@@ -62,10 +62,10 @@
     <div class="container pb-2 mb-4" style="background-color: rgba(216, 243, 212, 0.616);">
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             <div class="col">
-                <div class="p-3 border bg-light"><a href="#">登りたいリスト</a></div>
+                <div class="p-3 border bg-light"><a href="{{ 'favorite' }}">登りたいリスト</a></div>
             </div>
             <div class="col">
-                <div class="p-3 border bg-light"><a href="#">冒険の記録</a></div>
+                <div class="p-3 border bg-light"><a href="{{ 'history' }}">冒険の記録</a></div>
             </div>
             <div class="col">
                 <div class="p-3 border bg-light"><a href="#">プロフィール編集</a></div>

@@ -12,4 +12,13 @@ class Mount extends Model
     {
         return $this->belongsTo('App\Area');
     }
+
+    public function routes()
+    {
+        return $this->hasMany('App\Route');
+    }
+    public function mountsImags()
+    {
+        return $this->hasMany('App\MountsImag');
+    }
 }

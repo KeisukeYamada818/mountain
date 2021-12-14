@@ -36,13 +36,26 @@
                                 class="fas fa-home faa-bounce animated-hover fa-lg"></i>ホーム</a>
                     </li>
                     <li class="nav-item p-2">
-                        <a class="nav-link" href="#"><i
-                                class="fas fa-user-check faa-bounce animated-hover fa-lg"></i>新規会員登録</a>
+                        @guest
+                            <a class="nav-link" href="{{ route('register') }}"><i
+                                    class="fas fa-user-check faa-bounce animated-hover fa-lg"></i>新規会員登録</a>
+                        @endguest
                     </li>
                     <li class="nav-item p-2">
-                        <a class="nav-link" href="#"><i
+                        <a class="nav-link" href="{{ route('mypage') }}"><i
                                 class="fas fa-sign-in-alt faa-bounce animated-hover fa-lg"></i>マイページ</a>
                     </li>
+                    @auth
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                    @endauth
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="山・ルートを検索!" aria-label="Search">

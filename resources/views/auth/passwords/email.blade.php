@@ -25,7 +25,7 @@
 
                     <div class="form-group">
                         <input id="email" type="email"
-                            class="form-control @error('email') is-invalid @enderror mount-login-input" name="email"
+                            class="form-control @error('email') is-invalid @enderror samazon-login-input" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="メールアドレス">
 
                         @error('email')
@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn mount-submit-button w-100">
+                        <button type="submit" class="btn samazon-submit-button w-100">
                             送信
                         </button>
                     </div>
