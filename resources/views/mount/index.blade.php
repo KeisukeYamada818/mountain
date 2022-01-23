@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    <!-- ルート詳細画面 -->
+    <!-- 山 詳細画面 -->
     <nav style="--bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">ホーム</a></li>
@@ -11,6 +11,7 @@
 
     <div class="container">
         <div class="container row row-cols-2">
+            {{-- 山の名前が入るように修正する↓ --}}
             <a href="#" class="fs-1 col">{{ $route->mount->name }} {{ $route->name }}</a>
             @auth
                 @if ($route->isFavoritedBy(Auth::user()))
@@ -52,7 +53,8 @@
 
 
         <div class="col">
-
+            {{-- 山に紐づくルートの数分ループして表示するよう修正 --}}
+            <a href="{{ route('routes.show', $route) }}" class="fs-1">{{ $route->name }}</a><br>
             <p>所在地：{{ $route->mount->area->name }}</p>
             <p>難易度：@if ($route->level == 1)初級@elseif($route->level==2)中級@elseif($route->level==3)上級@endif</p>
             <p>所要時間：
@@ -64,7 +66,7 @@
                 @endif
             </p>
             <p>{{ $route->detail }}</p>
-            <a href="#">他のルート</a>
+            <a href="#"></a>
         </div>
     </div>
 @endsection
