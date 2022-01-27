@@ -8,7 +8,7 @@
                     <div class="panel-body">
 
 
-                        <a href="{{ url('route/create') }}" class="btn btn-success btn-sm" title="Add New route">
+                        <a href="{{ url('dashboard/route/create') }}" class="btn btn-success btn-sm" title="Add New route">
                             Add New
                         </a>
 

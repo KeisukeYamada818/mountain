@@ -19,11 +19,11 @@
                         @endif
 
 
-                        <form method="POST" action="/route/store" class="form-horizontal">
+                        <form method="POST" action="/dashboard/route/store" class="form-horizontal">
                             {{ csrf_field() }}
 
                             <div class="form-group">
-                                <label for="mount_id" class="col-md-4 control-label">mount_id: </label>
+                                <label for="mount_id" class="col-md-4 control-label">mount_name: </label>
                                 <div class="col-md-6">
 
                                     <select name="mount_id" id="mount_id">
