@@ -19,7 +19,8 @@
                         @endif
 
 
-                        <form method="POST" action="/dashboard/route/store" class="form-horizontal">
+                        <form method="POST" action="/dashboard/route" class="form-horizontal">
+                            @method('post')
                             {{ csrf_field() }}
 
                             <div class="form-group">
