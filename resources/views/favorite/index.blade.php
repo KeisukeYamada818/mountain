@@ -69,9 +69,9 @@
             </div>
         </div>
     @endforeach
+@endsection
 
-
-    {{-- 以下、表示イメージのダミー --}}
+{{-- 以下、元々の画面表示コード
     <div class="container row mb-2">
         <div class="container row m-1">
             <a href="#" class="fs-3 col">△△山 〇〇ルート</a>
@@ -110,5 +110,4 @@
             <p>ルートの説明---------------------------------</p>
             <a href="#">他のルート</a>
         </div>
-    </div>
-@endsection
+    </div> --}}
