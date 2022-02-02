@@ -17,21 +17,12 @@
     @endforeach
 
     {{-- Action Button --}}
-    @isset($actionText)
-        <?php
-        switch ($level) {
-            case 'success':
-            case 'error':
-                $color = $level;
-                break;
-            default:
-                $color = 'primary';
-        }
-        ?>
+    {{-- @isset($actionText)
+       
         @component('mail::button', ['url' => $actionUrl, 'color' => $color])
             {{ $actionText }}
         @endcomponent
-    @endisset
+    @endisset --}}
 
     {{-- Outro Lines --}}
     @foreach ($outroLines as $line)

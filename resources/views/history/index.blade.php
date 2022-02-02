@@ -55,15 +55,22 @@
 
 
                 <div class="col m-3">
-                    <p>日時：</p>
-                    <p>かかった時間：</p>
-                    <p>難易度：</p>
-                    <p>一言：</p>
-
+                    <p>所在地：{{ $route->mount->area->name }}</p>
+                    <p>難易度：@if ($route->level == 1)初級@elseif($route->level==2)中級@elseif($route->level==3)上級@endif</p>
+                    <p>所要時間：@if (intval(substr($route->times, 0, 2)) > 0)
+                            {{ intval(substr($route->times, 0, 2)) }}時間
+                        @endif
+                        @if (intval(substr($route->times, 3, 2)) > 0)
+                            {{ intval(substr($route->times, 3, 2)) }}分
+                        @endif
+                    </p>
+                    <p>{{ $route->detail }}</p>
+                    {{-- <a href="#">他のルート</a>山の詳細場面へ飛ばす --}}
                 </div>
             </div>
         </div>
     @endforeach
+
 @endsection
 
 {{-- 元のコード
@@ -102,7 +109,6 @@
     <div class="col">
         <p>日時：□年□月□日</p>
         <p>かかった時間：2時間</p>
-        <p>難易度：初級</p>
         <p>一言：</p>
     </div>
 </div>
