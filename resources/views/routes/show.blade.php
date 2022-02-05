@@ -11,17 +11,18 @@
 
     <div class="container">
         <div class="container row row-cols-2">
-            <a href="#" class="fs-1 col">{{ $route->mount->name }} {{ $route->name }}</a>
+            <a href="{{ route('routes.show', $route) }}" class="fs-1 col">{{ $route->mount->name }}
+                {{ $route->name }}</a>
             @auth
                 @if ($route->isFavoritedBy(Auth::user()))
                     <a href="/routes/{{ $route->id }}/favorite" class="btn text-favorite w-100">
                         <i class="fa fa-heart"></i>
-                        お気に入り解除
+                        お気に入り解除する
                     </a>
                 @else
                     <a href="/routes/{{ $route->id }}/favorite" class="btn text-favorite w-100">
                         <i class="fa fa-heart"></i>
-                        お気に入り
+                        お気に入りに登録
                     </a>
                 @endif
             @endauth

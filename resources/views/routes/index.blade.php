@@ -142,7 +142,7 @@
                                     {{ intval(substr($route->times, 3, 2)) }}分
                                 @endif
                             </p>
-                            <p>ルートの説明{{ $route->detail }}</p>
+                            <p>ルートの説明：{{ $route->detail }}</p>
                         </div>
                     </div>
                 @endforeach

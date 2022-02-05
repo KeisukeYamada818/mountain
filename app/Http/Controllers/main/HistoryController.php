@@ -29,4 +29,9 @@ class HistoryController extends Controller
         // ユーザーidからhistoryを検索して画面に表示
 
     }
+
+    public function create(Request $request)
+    {
+        return view("history.create", compact('histories'));
+    }
 }

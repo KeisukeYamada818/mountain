@@ -20,7 +20,9 @@
         @endphp
         <div class="container mb-2">
             <div class="row m-1">
-                <a href="#" class="fs-3 row">{{ $route->mount->name }} {{ $route->name }}</a>
+                <a href="{{ route('routes.show', $route) }}" class="fs-3 row">{{ $route->mount->name }}
+                    {{ $route->name }}</a>
+
             </div>
             <div class="row">
                 <div class="col">
