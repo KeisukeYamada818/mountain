@@ -13,7 +13,6 @@ class FavoriteController extends Controller
     {
         $user = Auth::user();
 
-
         $favorites = $user->favorites(Product::class)->get();
         return view("favorite.index", compact('favorites'));
     }
