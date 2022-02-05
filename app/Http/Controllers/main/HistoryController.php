@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\History;
+use App\Route;
 use Illuminate\Support\Facades\Log;
 
 class HistoryController extends Controller
@@ -32,6 +33,22 @@ class HistoryController extends Controller
 
     public function create(Request $request)
     {
-        return view("history.create", compact('histories'));
+        $route_id = $request->route_id;
+        $route = Route::where('id', $route_id)->first();
+        return view("history.create", compact('route'));
+    }
+
+    public function store(Request $request)
+    {
+        $user = Auth::user();
+        $history = new History();
+        $history->user_id = $user->id;
+        $history->route_id = $request->route_id;
+        $history->crimed_at = $request->crimed_at;
+        $history->minutes = $request->minutes;
+        $history->comment = $request->comment;
+        $history->save();
+
+        return redirect("history");
     }
 }

@@ -64,44 +64,43 @@
                 <h1 style="background-color: rgba(24, 73, 29, 0.986); display:inline-block; color:white; padding:10px">
                     登ったリストに登録！
                 </h1>
-                <form>
+                <form method="POST" action="/history/store">
+                    {{ csrf_field() }}
+                    <input type="hidden" value="{{ $route->id }}" name="route_id">
                     <div class="row p-4">
-                        <label for="exampleInputEmail1" class="form-label">登った日時</label>
+                        <label class="form-label">登った日時</label>
                         <div class="form-check col-3">
-                            <input class="form-check-input" type="date" name="crimed_at" value="crimed_at">
-
-
+                            <input class="" type="date" name="crimed_at" value="crimed_at">
                         </div>
                         <div class="container pt-4 pl-4">
                             <label for="time" class="form-label">かかった時間（往復）</label>
-                            <select class="form-select mb-3" aria-label="Default select example" name="minutes"
-                                value="minutes">
-                                <option value="v1">30分</option>
-                                <option value="v2">1時間</option>
-                                <option value="v3">1時間30分</option>
-                                <option value="v4">2時間</option>
-                                <option value="v5">2時間30分</option>
-                                <option value="v6" 　selected>3時間</option>
-                                <option value="v7">3時間30分</option>
-                                <option value="v8">4時間</option>
-                                <option value="v9">4時間30分</option>
-                                <option value="v10">5時間</option>
-                                <option value="v11">5時間30分</option>
-                                <option value="v12">6時間</option>
-                                <option value="v13">6時間30分</option>
-                                <option value="v14">7時間</option>
-                                <option value="v15">7時間30分</option>
-                                <option value="v16">8時間</option>
-                                <option value="v17">8時間30分</option>
-                                <option value="v18">9時間</option>
-                                <option value="v19">9時間30分</option>
-                                <option value="v20">10時間</option>
-                                <option value="v21">10時間30分</option>
+                            <select class="form-select mb-3" aria-label="Default select example" name="minutes">
+                                <option value="30">30分</option>
+                                <option value="60">1時間</option>
+                                <option value="90">1時間30分</option>
+                                <option value="120">2時間</option>
+                                <option value="150">2時間30分</option>
+                                <option value="180" selected>3時間</option>
+                                <option value="210">3時間30分</option>
+                                <option value="240">4時間</option>
+                                <option value="270">4時間30分</option>
+                                <option value="300">5時間</option>
+                                <option value="330">5時間30分</option>
+                                <option value="360">6時間</option>
+                                <option value="390">6時間30分</option>
+                                <option value="420">7時間</option>
+                                <option value="450">7時間30分</option>
+                                <option value="480">8時間</option>
+                                <option value="510">8時間30分</option>
+                                <option value="540">9時間</option>
+                                <option value="570">9時間30分</option>
+                                <option value="600">10時間</option>
+                                <option value="630">10時間30分</option>
                             </select>
                         </div>
                         <div class="container pt-4 pl-4">
-                            <label class="form-label">一言</label>
-                            <input type="text" name="name" value="comment" placeholder="入力ヒント">
+                            <label class="form-label">一言</label><br>
+                            <input type="text" name="comment" placeholder="２００文字まで">
                         </div>
                         <div class="p-4">
                             <button type="submit" class="btn btn-primary mb-3　btn-lg">登録</button>

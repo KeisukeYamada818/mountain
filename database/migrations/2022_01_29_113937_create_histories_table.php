@@ -17,7 +17,7 @@ class CreateHistoriesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('route_id');
-            $table->timestamp('crimed_at');
+            $table->date('crimed_at');
             $table->integer('minutes');
             $table->string('comment', 300);
             $table->timestamps();
