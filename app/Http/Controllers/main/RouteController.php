@@ -19,7 +19,28 @@ class RouteController extends Controller
      */
     public function index(Request $request)
     {
-        $routes = Route::all();
+        $routes = collect([]);
+        if (isset($request->mount_name) || isset($request->region) || isset($request->level) || isset($request->time)) {
+            $query = Route::query();
+            if (isset($request->mount_name)) {
+                $mount_name = $request->mount_name;
+                $mountQuery = Mount::query();
+                $mounts = $mountQuery->where('name', 'like', "%$mount_name%")->get();
+                if ($mounts->count() > 0) {
+                    $mount_ids = $mounts->pluck('id');
+                    $query = $query->whereIn('mount_id', $mount_ids);
+                } else {
+                    $query = $query->where('mount_id', '=', '-1');
+                }
+            }
+            if (isset($request->level)) {
+                $query = $query->where('level', '=', $request->level);
+            }
+
+            $routes = $query->get();
+        } else {
+            $routes = Route::all();
+        }
         return view("routes.index", compact('routes'));
     }
 

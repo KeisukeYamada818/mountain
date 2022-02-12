@@ -16,83 +16,83 @@
                 <h1 style="background-color: rgba(24, 73, 29, 0.986); display:inline-block; color:white; padding:10px">
                     登山ルート検索
                 </h1>
-                <div class="p-4">
-                    <label for="exampleFormControlInput1" class="form-label">山の名前</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex.富士山">
-                </div>
-                <div class="row p-4">
+                <form method="GET" action="/routes">
+                    <div class="p-4">
+                        <label for="exampleFormControlInput1" class="form-label">山の名前</label>
+                        <input name="mount_name" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="ex.富士山">
+                    </div>
+                    <div class="row p-4">
 
-                    <label for="exampleFormControlTextarea1" class="form-label col-12">所在地</label>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            北海道
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            東北
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            関東
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            中部
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            関西
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            中国
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            四国
-                        </label>
-                    </div>
-                    <div class="form-check col-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            九州
-                        </label>
+                        <label for="exampleFormControlTextarea1" class="form-label col-12">所在地</label>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                北海道
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="2" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                東北
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="3" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                関東
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="4" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                中部
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="5" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                関西
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="6" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                中国
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="7" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                四国
+                            </label>
+                        </div>
+                        <div class="form-check col-3">
+                            <input name="region" class="form-check-input" type="checkbox" value="8" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                九州
+                            </label>
+                        </div>
+
                     </div>
 
-                </div>
-
-
-                <form>
                     <div class="row p-4">
                         <label for="exampleInputEmail1" class="form-label">難易度</label>
                         <div class="form-check col-3">
-                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked"
+                            <input class="form-check-input" type="radio" name="level" value="1" id="flexCheckChecked"
                                 checked>
                             <label class="form-check-label" for="flexCheckChecked">
                                 初級
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="radio" name="level" value="2" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 中級
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input class="form-check-input" type="radio" name="level" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="radio" name="level" value="3" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 上級
                             </label>
@@ -100,7 +100,7 @@
 
                     </div>
                     <div class="container pt-4 pl-4">
-                        <label for="time" class="form-label">所要時間（往復）</label>
+                        <label name="time" for="time" class="form-label">所要時間（往復）</label>
                         <select class="form-select mb-3" aria-label="Default select example">
 
                             <option selected>選択してください</option>
@@ -114,6 +114,7 @@
                     <div class="p-4">
                         <button type="submit" class="btn btn-primary mb-3　btn-lg">検索</button>
                     </div>
+
                 </form>
             </div>
 
@@ -126,8 +127,8 @@
                     <div class="container row">
                         <div class="col p-2">
 
-                            <img src="{{ asset('storage/mount/' . $route->mount->mountsImags[0]->image) }}" alt=""
-                                class="img-fluid">
+                            {{-- <img src="{{ asset('storage/mount/' . $route->mount->mountsImags[0]->image) }}" alt=""
+                                class="img-fluid"> --}}
                         </div>
                         <div class="col">
                             <a href="{{ route('routes.show', $route) }}"
