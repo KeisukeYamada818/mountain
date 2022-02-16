@@ -6,6 +6,7 @@ use App\Route;
 use Illuminate\Http\Request;
 use App\Mount;
 use App\MountsImag;
+use App\Area;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,7 +37,28 @@ class RouteController extends Controller
             if (isset($request->level)) {
                 $query = $query->where('level', '=', $request->level);
             }
-
+            if (isset($request->time)) {
+                $times = [
+                    1 => ["start" => "00:00:00", "end" => "00:59:59"],
+                    2 => ["start" => "01:00:00", "end" => "01:59:59"],
+                    3 => ["start" => "02:00:00", "end" => "02:59:59"],
+                    4 => ["start" => "03:00:00", "end" => "03:59:59"],
+                    5 => ["start" => "04:00:00", "end" => "23:59:59"],
+                ];
+                if (isset($times[$request->time])) {
+                    $time = $times[$request->time];
+                    $query = $query->whereBetween('times', [$time["start"], $time["end"]]);
+                }
+            }
+            if (isset($request->region)) {
+                $areaQuery = Area::query();
+                $areas = $areaQuery->whereIn('region_id', $request->region)->get();
+                $area_ids = $areas->pluck('code');
+                $mountQuery = Mount::query();
+                $mounts = $mountQuery->whereIn('area_id', $area_ids)->get();
+                $mount_ids = $mounts->pluck('id');
+                $query = $query->whereIn('mount_id', $mount_ids);
+            }
             $routes = $query->get();
         } else {
             $routes = Route::all();

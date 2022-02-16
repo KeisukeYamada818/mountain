@@ -26,49 +26,49 @@
 
                         <label for="exampleFormControlTextarea1" class="form-label col-12">所在地</label>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 北海道
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="2" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="2" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 東北
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="3" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="3" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 関東
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="4" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="4" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 中部
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="5" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="5" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 関西
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="6" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="6" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 中国
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="7" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="7" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 四国
                             </label>
                         </div>
                         <div class="form-check col-3">
-                            <input name="region" class="form-check-input" type="checkbox" value="8" id="flexCheckChecked">
+                            <input name="region[]" class="form-check-input" type="checkbox" value="8" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 九州
                             </label>
@@ -100,8 +100,8 @@
 
                     </div>
                     <div class="container pt-4 pl-4">
-                        <label name="time" for="time" class="form-label">所要時間（往復）</label>
-                        <select class="form-select mb-3" aria-label="Default select example">
+                        <label for="time" class="form-label">所要時間（往復）</label>
+                        <select name="time" class="form-select mb-3" aria-label="Default select example">
 
                             <option selected>選択してください</option>
                             <option value="1">1時間以内</option>
